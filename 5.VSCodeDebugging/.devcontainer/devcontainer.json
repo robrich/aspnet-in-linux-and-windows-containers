@@ -1,0 +1,11 @@
+{
+  "name": "ASP.NET",
+  "dockerFile": "Dockerfile",
+  "extensions": [
+		"ms-dotnettools.csharp"
+  ],
+  "postCreateCommand": "dotnet restore",
+  "forwardPorts": [
+    5000
+  ]
+}
