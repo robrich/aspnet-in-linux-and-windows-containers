@@ -6,7 +6,7 @@ In this example we use a volume to quickly iterate on the website while it's run
 ## Run it
 
 ```sh
-docker build -t 4volume .
+docker build -t 4volume -f Dockerfile.dev .
 docker run -p 5000:5000 -v "$pwd:/app" -v /app/bin -v /app/obj 4volume
 ```
 

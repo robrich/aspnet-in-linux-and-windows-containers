@@ -29,7 +29,10 @@ namespace WebApplication1.Controllers
 		public async Task<IActionResult> Privacy()
 		{
 			string results = await client.GetStringAsync("http://webapi1/weatherforecast");
-			List<WeatherForecast> values = JsonSerializer.Deserialize<List<WeatherForecast>>(results);
+			List<WeatherForecast> values = JsonSerializer.Deserialize<List<WeatherForecast>>(results, new JsonSerializerOptions
+			{
+				PropertyNameCaseInsensitive = true,
+			});
 
 			return View(values);
 		}

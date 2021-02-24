@@ -4,5 +4,6 @@ services:
   web:
     build:
       context: .
+    image: step2
     ports:
     - 80:80
